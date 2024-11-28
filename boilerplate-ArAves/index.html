@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Chloroceryle amazona</title> 
+    <!-- Cambiar el título de la página -->
+    <meta charset="utf-8">
+    <link rel="icon" href="./assets/ReinoAlado-favicon.png">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <model-viewer id="ave" src="./assets/ave.glb" 
+    ar ar-modes="webxr scene-viewer quick-look" 
+    camera-controls tone-mapping="neutral" poster="poster.webp"
+    ios-src="./assets/ave.usdz"
+    shadow-intensity="1" animation-name="Idle" autoplay>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          Míralo en tu espacio
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer> 
+      <div id="container">
+        <button id="cambioAnimation">Cambiar la Animación</button>
+      </div>
+    <script src="script.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  </body>
+</html>
